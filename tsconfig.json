@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/node-lts-strictest-esm/tsconfig.json",
+  "compilerOptions": {
+    // [start] options useful to toggle from time to time
+    "exactOptionalPropertyTypes": true,
+    // most of the time we are not interested in ts errors in libs, but sometimes it's useful to take a look - just in case we started using some garbage module
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    // [end]
+
+    "declaration": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true, // exhaustive switch
+    "isolatedModules": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "noErrorTruncation": true, // shows more fuller types in vscode on hover
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "module": "ES2022",
+    "importsNotUsedAsValues": "remove"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
