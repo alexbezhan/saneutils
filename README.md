@@ -1,1 +1,2 @@
-# saneutils
+# Typescript utils for sane projects
+
